@@ -15,4 +15,4 @@ The following repo demonstrates log processing as per the below diagram.
 8. Blob Trigger (Function/Logic App) process the Json file and for each Json object in the file produces and publishes and event into Even Hubs.
 9. Log Event Consumer ingests log events.
 
-![Example Image](images\log-processor-flow.png)
+![Example Image](images/log-processor-flow.png)
