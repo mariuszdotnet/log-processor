@@ -10,7 +10,7 @@ This how-to guide focuses on building a serverless workflow set to monitor and t
 
 ## Process Flow
 
-![Example Image](https://file+.vscode-resource.vscode-cdn.net/c%3A/git/log-processor/images/log-processor-flow.png)
+![Example Image](images/log-processor-flow.png)
 
 1. Producer generates a Json log file and saves it in gzip format.
 2. Producer uploads the gzip log file to Azure Storage container.
@@ -18,7 +18,7 @@ This how-to guide focuses on building a serverless workflow set to monitor and t
 4. Blob Trigger Function deflates the log file from gzip format.
 5. Blob Trigger Function saves the Json log file to another Azure Storage container.
 6. Storage Account generates “Blob Create Event”.
-7. a. Event Grid triggers Blob Trigger Logic App to process the Json log file. See this [repo ](https://github.com/dcucereavii-ms/log-processing-with-logicapp/tree/main)for details.
+7. a. Event Grid triggers Blob Trigger Logic App to process the Json log file. See this [repo](https://github.com/dcucereavii-ms/log-processing-with-logicapp/tree/main)for details.
    b. Blob Create Event” triggers Blob Trigger Function to process the Json log file.
 8. Blob Trigger (Function/Logic App) process the Json file and for each Json object in the file produces and publishes and event into Even Hubs.
 9. Log Event Consumer ingests log events.
